@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+uid="$(stat . --format '%u')"
+gid="$(stat . --format '%g')"
+sudo -Eu "#$uid" -g "#$gid" -- "$@"

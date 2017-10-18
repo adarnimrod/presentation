@@ -1,0 +1,9 @@
+.git/
+.gitignore
+.dockerignore
+*.md
+*.dot
+*.pdf
+example/
+*.swp
+Dockerfile
