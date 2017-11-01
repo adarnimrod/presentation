@@ -18,7 +18,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         texlive-font-utils \
         texlive-latex-base \
         texlive-latex-extra \
-        texlive-luatex && \
+        texlive-luatex \
+        texlive-publishers && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/*
 VOLUME /project
 WORKDIR /project
