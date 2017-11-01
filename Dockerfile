@@ -13,6 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         pandoc \
         sudo \
         texlive-extra-utils \
+        texlive-fonts-extra \
         texlive-fonts-recommended \
         texlive-font-utils \
         texlive-latex-base \
