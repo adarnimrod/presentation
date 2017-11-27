@@ -7,8 +7,8 @@ An example presentation written in Markdown and DOT.
 To watch the current directory and build the presentation whenever a change
 occurs
 
-`docker run -tv "$PWD:/project" adarnimrod/presentation`
+`docker run -tv "$PWD:/volume" adarnimrod/presentation`
 
 To build the presentation and exit
 
-`docker run -tv "$PWD:/project" adarnimrod/presentation make`
+`docker run -tv "$PWD:/volume" adarnimrod/presentation make`
