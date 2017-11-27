@@ -21,8 +21,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         texlive-luatex \
         texlive-publishers && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/*
-VOLUME /project
-WORKDIR /project
-COPY entrypoint /entrypoint
-ENTRYPOINT ["/entrypoint"]
-CMD ["on-change", ".", "make"]
+ADD [ "https://www.shore.co.il/blog/static/runas", "/entrypoint" ]
+ENTRYPOINT [ "/bin/sh", "/entrypoint" ]
+VOLUME /volume
+WORKDIR /volume
+ENV HOME /volume
+CMD [ "on-change", ".", "make" ]

@@ -8,7 +8,7 @@ Markdown or DOT).
 `docker run -itv "$PWD:/project" adarnimrod/presentation`
 
 Will watch the current directory and run `make` whenever a file changes. One can
-add a shell alias `alias presentation='docker run -itv "$PWD:/project"
+add a shell alias `alias presentation='docker run -itv "$PWD:/volume"
 adarnimrod/presentation'` for easier use.
 
 See the example folder for more details.
