@@ -3,7 +3,7 @@ RUN apk --update add git && \
     rm -rf /var/cache/apk/* && \
     /usr/local/go/bin/go get github.com/spelufo/on-change
 
-FROM debian:stretch-slim
+FROM debian:buster-slim
 COPY --from=on-change /go/bin/on-change /usr/local/bin
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
