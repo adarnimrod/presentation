@@ -3,10 +3,12 @@
 all: presentation.pdf
 
 presentation.pdf: diagram.pdf
-	pandoc -t beamer presentation.md -o presentation.pdf
 
-diagram.pdf: diagram.dot
-	dot diagram.dot -Tpdf > diagram.pdf
+%.pdf: %.md
+	pandoc -t beamer $< -o $@
+
+%.pdf: %.dot
+	dot $< -Tpdf > $@
 
 clean:
 	- rm *.pdf

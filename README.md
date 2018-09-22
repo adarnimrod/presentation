@@ -5,10 +5,10 @@ Markdown or DOT).
 
 ## Usage
 
-`docker run -itv "$PWD:/project" adarnimrod/presentation`
+`docker run --rm -itv "$PWD:/volume" adarnimrod/presentation`
 
 Will watch the current directory and run `make` whenever a file changes. One can
-add a shell alias `alias presentation='docker run -itv "$PWD:/volume"
+add a shell alias `alias presentation='docker run --rm -itv "$PWD:/volume"
 adarnimrod/presentation'` for easier use.
 
 See the example folder for more details.
@@ -20,7 +20,9 @@ See the example folder for more details.
 - [GNU Make](https://www.gnu.org/software/make/)
 - [LuaTex](http://luatex.org/)
 - [LaTeX](http://www.latex-project.org/)
+- [XeTex](http://xetex.sourceforge.net/)
 - [on-change](https://github.com/spelufo/on-change)
+- [groff](https://www.gnu.org/software/groff/)
 
 ## License
 
