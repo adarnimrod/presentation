@@ -8,6 +8,7 @@ COPY --from=on-change /go/bin/on-change /usr/local/bin
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         fonts-font-awesome \
+        graphicsmagick \
         gosu \
         graphviz \
         groff \
