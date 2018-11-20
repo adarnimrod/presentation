@@ -13,3 +13,7 @@ author: Your name here
 ## Diagram
 
 ![Diagram](diagram.pdf)
+
+## Animated gif
+
+![Animated gif](prompt.gif)

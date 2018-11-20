@@ -1,10 +1,10 @@
-FROM golang:1.11-alpine3.8 as on-change
+FROM golang:1.11-alpine3.8 as golang
 RUN apk --update add git && \
-    rm -rf /var/cache/apk/* && \
-    /usr/local/go/bin/go get github.com/spelufo/on-change
+    /usr/local/go/bin/go get github.com/spelufo/on-change && \
+    /usr/local/go/bin/go get github.com/sugyan/ttyrec2gif
 
 FROM debian:buster-slim
-COPY --from=on-change /go/bin/on-change /usr/local/bin
+COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         fonts-font-awesome \
