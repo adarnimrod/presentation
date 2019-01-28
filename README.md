@@ -23,6 +23,7 @@ See the example folder for more details.
 - [XeTex](http://xetex.sourceforge.net/)
 - [on-change](https://github.com/spelufo/on-change)
 - [groff](https://www.gnu.org/software/groff/)
+- [ttyrec2gif](https://github.com/sugyan/ttyrec2gif)
 
 ## License
 
