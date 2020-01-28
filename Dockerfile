@@ -1,7 +1,6 @@
-FROM golang:1.11-alpine3.8 as golang
-RUN apk --update add git && \
-    /usr/local/go/bin/go get github.com/spelufo/on-change && \
-    /usr/local/go/bin/go get github.com/sugyan/ttyrec2gif
+FROM golang:1.13-buster as golang
+RUN go get github.com/spelufo/on-change && \
+    go get github.com/sugyan/ttyrec2gif
 
 FROM debian:buster-slim
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
