@@ -7,6 +7,9 @@ COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         fonts-font-awesome \
+        fonts-linex \
+        fonts-noto-extra \
+        fonts-sil-ezra \
         graphicsmagick \
         gosu \
         graphviz \
@@ -18,6 +21,8 @@ RUN apt-get update && \
         texlive-fonts-extra \
         texlive-fonts-recommended \
         texlive-font-utils \
+        texlive-lang-arabic \
+        texlive-lang-other \
         texlive-latex-base \
         texlive-latex-extra \
         texlive-luatex \
