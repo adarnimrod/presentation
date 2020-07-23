@@ -17,6 +17,7 @@ RUN apt-get update && \
         lmodern \
         make \
         pandoc \
+        pdftk \
         texlive-extra-utils \
         texlive-fonts-extra \
         texlive-fonts-recommended \
