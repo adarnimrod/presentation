@@ -17,7 +17,6 @@ RUN apt-get update && \
         lmodern \
         make \
         pandoc \
-        pdftk \
         texlive-extra-utils \
         texlive-fonts-extra \
         texlive-fonts-recommended \
@@ -29,6 +28,7 @@ RUN apt-get update && \
         texlive-luatex \
         texlive-publishers \
         texlive-xetex \
+        qpdf \
     && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/*
 ADD [ "https://www.shore.co.il/blog/static/runas", "/entrypoint" ]
