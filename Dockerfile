@@ -16,6 +16,7 @@ RUN apt-get update && \
         groff \
         lmodern \
         make \
+        netbase \
         pandoc \
         texlive-extra-utils \
         texlive-fonts-extra \
