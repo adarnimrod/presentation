@@ -17,3 +17,6 @@ author: Your name here
 ## Animated gif
 
 ![Animated gif](prompt.gif)
+
+## External image
+![External image](https://www.shore.co.il/cgit/rcfiles/plain/.face)
