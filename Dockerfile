@@ -6,6 +6,7 @@ FROM debian:buster-slim
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        ca-certificates \
         fonts-font-awesome \
         fonts-linex \
         fonts-noto-extra \
