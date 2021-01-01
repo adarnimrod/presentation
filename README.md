@@ -1,5 +1,7 @@
 # Presentation
 
+[![pipeline status](https://git.shore.co.il/nimrod/presentation/badges/master/pipeline.svg)](https://git.shore.co.il/nimrod/presentation/-/commits/master)
+
 A Dockerized presentation toolkit for building presentation from markup (like
 Markdown or DOT).
 
