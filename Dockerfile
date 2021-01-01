@@ -4,6 +4,7 @@ RUN go get github.com/spelufo/on-change && \
 
 FROM debian:buster-slim
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
+# hadolint ignore=DL3008
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         ca-certificates \

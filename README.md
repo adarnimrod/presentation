@@ -5,11 +5,11 @@ Markdown or DOT).
 
 ## Usage
 
-`docker run --rm -itv "$PWD:/volume" adarnimrod/presentation`
+`docker run --rm -itv “$PWD:/volume“ adarnimrod/presentation`
 
 Will watch the current directory and run `make` whenever a file changes. One can
-add a shell alias `alias presentation='docker run --rm -itv "$PWD:/volume"
-adarnimrod/presentation'` for easier use.
+add a shell alias
+`alias presentation='docker run --rm -itv “$PWD:/volume“ adarnimrod/presentation'` for easier use.
 
 See the example folder for more details.
 
@@ -31,7 +31,7 @@ This software is licensed under the MIT license (see `LICENSE.txt`).
 
 ## Author Information
 
-Nimrod Adar, [contact me](mailto:nimrod@shore.co.il) or visit my [website](
-https://www.shore.co.il/). Patches are welcome via [`git send-email`](
-http://git-scm.com/book/en/v2/Git-Commands-Email). The repository is located
-at: <https://www.shore.co.il/git/>.
+Nimrod Adar, [contact me](mailto:nimrod@shore.co.il) or visit my
+[website](https://www.shore.co.il/). Patches are welcome via
+[`git send-email`](http://git-scm.com/book/en/v2/Git-Commands-Email). The repository
+is located at: <https://git.shore.co.il/expore/>.
