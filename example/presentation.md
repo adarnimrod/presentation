@@ -19,4 +19,4 @@ author: Your name here
 ![Animated gif](prompt.gif)
 
 ## External image
-![External image](https://www.shore.co.il/cgit/rcfiles/plain/.face)
+![External image](https://git.shore.co.il/nimrod/rcfiles/-/raw/master/.face)
