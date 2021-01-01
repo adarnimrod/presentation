@@ -26,6 +26,9 @@ See the example folder for more details.
 - [on-change](https://github.com/spelufo/on-change)
 - [groff](https://www.gnu.org/software/groff/)
 - [ttyrec2gif](https://github.com/sugyan/ttyrec2gif)
+- [qpdf](http://qpdf.sourceforge.net/)
+- [Ghostscript](https://www.ghostscript.com/)
+- [GraphicsMagick](http://www.graphicsmagick.org/)
 
 ## License
 
