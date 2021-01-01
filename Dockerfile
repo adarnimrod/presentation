@@ -12,6 +12,7 @@ RUN apt-get update && \
         fonts-linex \
         fonts-noto-extra \
         fonts-sil-ezra \
+        ghostscript \
         graphicsmagick \
         gosu \
         graphviz \
