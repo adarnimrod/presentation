@@ -43,4 +43,4 @@ WORKDIR /volume
 ENV HOME /volume
 # Run a test build.
 COPY example/ /example/
-RUN make -C /example all clean
+RUN make --debug=j --keep-going -C /example test

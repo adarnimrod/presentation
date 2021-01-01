@@ -1,5 +1,7 @@
-.PHONY: all clean
+.PHONY: test
+test: clean all
 
+.PHONY: all
 all: presentation.pdf left-to-right.pdf
 
 presentation.pdf: diagram.pdf
@@ -17,5 +19,6 @@ left-to-right.pdf: left-to-right.md
 %.gif: %.tty
 	ttyrec2gif -in $< -out $@
 
+.PHONY: clean
 clean:
 	- rm *.pdf *.gif
