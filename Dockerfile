@@ -1,4 +1,4 @@
-FROM golang:1.13-buster as golang
+FROM golang:1.15-buster as golang
 RUN go get github.com/spelufo/on-change && \
     go get github.com/sugyan/ttyrec2gif
 
