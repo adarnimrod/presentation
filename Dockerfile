@@ -17,6 +17,7 @@ RUN apt-get update && \
         gosu \
         graphviz \
         groff \
+        librsvg2-bin \
         lmodern \
         make \
         netbase \
