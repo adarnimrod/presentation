@@ -7,11 +7,11 @@ Markdown or DOT).
 
 ## Usage
 
-`docker run --rm -itv “$PWD:/volume“ adarnimrod/presentation`
+`docker run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation`
 
 Will watch the current directory and run `make` whenever a file changes. One can
 add a shell alias
-`alias presentation='docker run --rm -itv “$PWD:/volume“ adarnimrod/presentation'` for easier use.
+`alias presentation='docker run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation'` for easier use.
 
 See the example folder for more details.
 
