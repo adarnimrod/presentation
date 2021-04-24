@@ -4,6 +4,8 @@ include:
     file: templates/pre-commit.yml
   - project: shore/ci-templates
     file: templates/docker.yml
+  - project: shore/ci-templates
+    file: templates/notify.yml
 
 stages:
   - test
