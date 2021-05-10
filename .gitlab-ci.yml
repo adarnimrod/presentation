@@ -17,7 +17,7 @@ stages:
   - build
   - deploy
 
-build:
+build container image:
   extends: .docker-build-shore
   tags: [ns4.shore.co.il]
 
