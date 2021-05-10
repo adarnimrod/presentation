@@ -5,7 +5,12 @@ include:
   - project: shore/ci-templates
     file: templates/docker.yml
   - project: shore/ci-templates
+    file: templates/presentation.yml
+  - project: shore/ci-templates
     file: templates/notify.yml
+
+variables:
+  PRESENTATION_ROOT: example
 
 stages:
   - test
