@@ -13,7 +13,8 @@ Will watch the current directory and run `make` whenever a file changes. One can
 add a shell alias
 `alias presentation='docker run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation'` for easier use.
 
-See the example folder for more details.
+See the example folder for more details and the [generated
+PDF](https://git.shore.co.il/nimrod/presentation/-/jobs/artifacts/master/raw/example/presentation.pdf?job=presentation%20build).
 
 ## Contains
 
