@@ -1,6 +1,7 @@
 ---
 title: Presentation
 author: Your name here
+theme: metropolis
 ...
 
 # Section
