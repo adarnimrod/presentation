@@ -16,8 +16,8 @@ add a shell alias
 See the example folder for more details and the [generated
 PDF](https://git.shore.co.il/nimrod/presentation/-/jobs/artifacts/master/raw/example/presentation.pdf?job=presentation%20build).
 
-If you're using GitLab, check out my [CI
-template](https://git.shore.co.il/shore/ci-templates/-/blob/master/templates/presentation.yml)
+If you're using GitLab, check out the [CI
+template](https://git.shore.co.il/nimrod/presentation/-/blob/master/gitlab-ci-template/presentation.yml)
 if you wish to build presentation as part of a pipeline.
 
 ## Contains

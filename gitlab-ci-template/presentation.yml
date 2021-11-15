@@ -1,0 +1,16 @@
+---
+presentation build:
+  stage: build
+  tags: [ns4.shore.co.il]
+  image:
+    name: registry.shore.co.il/presentation
+    entrypoint: [""]
+  before_script:
+    - |
+      [ -z "${PRESENTATION_ROOT:-}" ] || cd "$PRESENTATION_ROOT"
+  script:
+    - make --jobs=4
+  artifacts:
+    paths:
+      - '*.pdf'
+      - '**/*.pdf'
