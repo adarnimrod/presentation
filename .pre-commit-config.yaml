@@ -1,49 +1,70 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks.git
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
+      - id: check-json
       - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
       - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
       - id: trailing-whitespace
+        exclude: \.diff$
 
-  - repo: https://github.com/Yelp/detect-secrets
-    rev: v0.14.3
+  - repo: https://github.com/codespell-project/codespell.git
+    rev: v2.1.0
+    hooks:
+      - id: codespell
+
+  - repo: https://github.com/Yelp/detect-secrets.git
+    rev: v1.1.0
     hooks:
       - id: detect-secrets
 
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.25.0
-    hooks:
-      - id: yamllint
-
-  - repo: https://github.com/amperser/proselint/
+  - repo: https://github.com/amperser/proselint.git
     rev: 0.10.2
     hooks:
       - id: proselint
         types: [plain-text]
         exclude: LICENSE|example
 
+  - repo: https://gitlab.com/devopshq/gitlab-ci-linter.git
+    rev: v1.0.4
+    hooks:
+      - id: gitlab-ci-linter
+        args:
+          - "--server"
+          - https://git.shore.co.il
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+
   - repo: https://github.com/executablebooks/mdformat.git
-    rev: 0.5.3
+    rev: 0.7.10
     hooks:
       - id: mdformat
         exclude: example
 
-  - repo: https://git.shore.co.il/nimrod/shell-pre-commit.git
-    rev: v0.6.0
+  - repo: https://git.shore.co.il/nimrod/pre-commit-hooks.git
+    rev: v0.2.0
     hooks:
-      - id: shell-lint
+      - id: shell-validate
+      - id: docker-compose
 
   - repo: https://github.com/shellcheck-py/shellcheck-py.git
-    rev: v0.7.1.1
+    rev: v0.7.2.1
     hooks:
       - id: shellcheck
 
-  - repo: https://git.shore.co.il/nimrod/docker-pre-commit.git/
-    rev: v0.3.0
+  - repo: https://github.com/AleksaC/hadolint-py.git
+    rev: v2.8.0
     hooks:
       - id: hadolint
-      - id: docker-compose
