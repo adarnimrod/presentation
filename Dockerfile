@@ -1,8 +1,8 @@
-FROM golang:1.17-bullseye as golang
-RUN go get github.com/spelufo/on-change && \
-    go get github.com/sugyan/ttyrec2gif
+FROM docker.io/golang:1.17-bullseye as golang
+RUN go install github.com/spelufo/on-change@latest && \
+    go install github.com/sugyan/ttyrec2gif@latest
 
-FROM debian:buster-slim
+FROM docker.io/debian:bullseye-slim
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 # hadolint ignore=DL3008
 RUN apt-get update && \
