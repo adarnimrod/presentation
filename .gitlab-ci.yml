@@ -14,6 +14,9 @@ variables:
 docker-build:
   extends: .docker-build-shore
   tags: [ns4.shore.co.il]
+  variables:
+    COMPOSE_DOCKER_CLI_BUILD: ""
+    DOCKER_BUILDKIT: ""
 
 push:
   extends: .docker-push
