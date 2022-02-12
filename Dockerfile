@@ -22,6 +22,7 @@ RUN apt-get update && \
         make \
         netbase \
         pandoc \
+        poppler-utils \
         texlive-extra-utils \
         texlive-fonts-extra \
         texlive-fonts-recommended \

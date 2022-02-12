@@ -34,6 +34,7 @@ if you wish to build presentation as part of a pipeline.
 - [qpdf](http://qpdf.sourceforge.net/)
 - [Ghostscript](https://www.ghostscript.com/)
 - [GraphicsMagick](http://www.graphicsmagick.org/)
+- [Poppler utils](https://poppler.freedesktop.org/)
 
 ## License
 
