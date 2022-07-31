@@ -35,6 +35,7 @@ if you wish to build presentation as part of a pipeline.
 - [Ghostscript](https://www.ghostscript.com/)
 - [GraphicsMagick](http://www.graphicsmagick.org/)
 - [Poppler utils](https://poppler.freedesktop.org/)
+- [Diagrams](https://diagrams.mingrammer.com/)
 
 ## License
 

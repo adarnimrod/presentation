@@ -23,6 +23,7 @@ RUN apt-get update && \
         netbase \
         pandoc \
         poppler-utils \
+        python3-diagrams \
         texlive-extra-utils \
         texlive-fonts-extra \
         texlive-fonts-recommended \
