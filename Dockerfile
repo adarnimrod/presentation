@@ -2,25 +2,22 @@ FROM docker.io/golang:1.17-bullseye as golang
 RUN go install github.com/spelufo/on-change@latest && \
     go install github.com/sugyan/ttyrec2gif@latest
 
-FROM docker.io/debian:bullseye-slim
+# hadolint ignore=DL3007
+FROM registry.shore.co.il/toolbx:latest
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 # hadolint ignore=DL3008
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        ca-certificates \
         fonts-font-awesome \
         fonts-linex \
         fonts-noto-extra \
         fonts-sil-ezra \
         ghostscript \
         graphicsmagick \
-        gosu \
         graphviz \
         groff \
         librsvg2-bin \
         lmodern \
-        make \
-        netbase \
         pandoc \
         poppler-utils \
         python3-diagrams \
@@ -38,8 +35,7 @@ RUN apt-get update && \
         qpdf \
     && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/*
-ADD [ "https://www.shore.co.il/blog/static/runas", "/entrypoint" ]
-ENTRYPOINT [ "/bin/sh", "/entrypoint" ]
+ENTRYPOINT [ "/usr/local/sbin/runas" ]
 CMD [ "on-change", ".", "make" ]
 VOLUME /volume
 WORKDIR /volume
