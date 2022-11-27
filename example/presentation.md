@@ -2,7 +2,7 @@
 title: Presentation
 author: Your name here
 theme: metropolis
-...
+---
 
 # Section
 
@@ -20,4 +20,5 @@ theme: metropolis
 ![Animated gif](prompt.gif)
 
 ## External image
+
 ![External image](https://git.shore.co.il/nimrod/rcfiles/-/raw/master/.face)
