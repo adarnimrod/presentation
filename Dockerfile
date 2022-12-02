@@ -18,6 +18,7 @@ RUN apt-get update && \
         groff \
         librsvg2-bin \
         lmodern \
+        mandoc \
         pandoc \
         poppler-utils \
         python3-diagrams \
