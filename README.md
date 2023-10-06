@@ -2,16 +2,15 @@
 
 [![pipeline status](https://git.shore.co.il/nimrod/presentation/badges/master/pipeline.svg)](https://git.shore.co.il/nimrod/presentation/-/commits/master)
 
-A Dockerized presentation toolkit for building presentation from markup (like
-Markdown or DOT).
+A containerized presentation toolkit for building presentations from markup
+(like Markdown or DOT).
 
 ## Usage
 
-`docker run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation`
+`podman run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation`
 
-Will watch the current directory and run `make` whenever a file changes. One can
-add a shell alias
-`alias presentation='docker run --rm -itv “$PWD:/volume“ registry.shore.co.il/presentation'` for easier use.
+Will watch the current directory and run `make` whenever a file changes
+(replace `podman` with `docker` if that's what you're using).
 
 See the example folder for more details and the [generated
 PDF](https://git.shore.co.il/nimrod/presentation/-/jobs/artifacts/master/raw/example/presentation.pdf?job=presentation%20build).
@@ -19,6 +18,20 @@ PDF](https://git.shore.co.il/nimrod/presentation/-/jobs/artifacts/master/raw/exa
 If you're using GitLab, check out the [CI
 template](https://git.shore.co.il/nimrod/presentation/-/blob/master/gitlab-ci-template/presentation.yml)
 if you wish to build presentation as part of a pipeline.
+
+Yet another option is using the contained tools instead of installing them in
+your system. For that copy the [presentation
+script](https://git.shore.co.il/nimrod/presentation/-/blob/master/presentation)
+to some in your `PATH` and create symlinks to the script with the name of the
+binary you wish to use. For example:
+
+```
+curl https://git.shore.co.il/nimrod/presentation/-/blob/master/presentation > ~/.local/bin/presentation
+chmod +x ~/.local/bin/presentation
+ln -s ~/.local/bin/pandoc presentation
+```
+
+In this example when you run `pandoc` it would run it using podman.
 
 ## Contains
 

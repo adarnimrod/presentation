@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+basename="$(basename "$0")"
+
+if [ "${1:-}" = '-u' ]
+then
+    podman image pull registry.shore.co.il/presentation
+elif [ "${1:-}" = "-h" ]
+then
+    echo "USAGE: ${basename} [-d] [-h] [BINARY_NAME] [...]"
+# If invoked using presentation, pass the arguments to the podman run command.
+elif [ "$basename" = presentation ]
+then
+    exec podman run --rm --interactive --tty --volume "$PWD:/volume" registry.shore.co.il/presentation "$@"
+# Use the system one, if available.
+elif command -pv "$basename" > /dev/null
+then
+    exec "$basename" "$@"
+else
+    exec podman run --rm --interactive --tty --volume "$PWD:/volume" registry.shore.co.il/presentation "$basename" "$@"
+fi
