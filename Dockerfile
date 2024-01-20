@@ -5,7 +5,7 @@ RUN go install github.com/spelufo/on-change@latest && \
 # hadolint ignore=DL3007
 FROM registry.shore.co.il/toolbx:latest
 COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
-# hadolint ignore=DL3008
+# hadolint ignore=DL3008,DL3013
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         fonts-font-awesome \
@@ -21,7 +21,7 @@ RUN apt-get update && \
         mandoc \
         pandoc \
         poppler-utils \
-        python3-diagrams \
+        python3-pip \
         texlive-extra-utils \
         texlive-fonts-extra \
         texlive-fonts-recommended \
@@ -35,7 +35,10 @@ RUN apt-get update && \
         texlive-xetex \
         qpdf \
     && \
-    rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/*
+    python3 -m pip install --no-cache-dir --break-system-packages \
+        diagrams \
+    && \
+    rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/archives/* ~/.cache/*
 ENTRYPOINT [ "/usr/local/sbin/runas" ]
 CMD [ "on-change", ".", "make" ]
 VOLUME /volume
