@@ -8,6 +8,7 @@ COPY --from=golang /go/bin/on-change /go/bin/ttyrec2gif /usr/local/bin/
 # hadolint ignore=DL3008,DL3013
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        build-essential \
         fonts-font-awesome \
         fonts-linex \
         fonts-noto-extra \
@@ -21,6 +22,7 @@ RUN apt-get update && \
         mandoc \
         pandoc \
         poppler-utils \
+        python3-dev \
         python3-pip \
         texlive-extra-utils \
         texlive-fonts-extra \
